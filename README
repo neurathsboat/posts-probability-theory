@@ -1,0 +1,16 @@
+# Neurath's Boat blog post template
+
+This is a template repository from which
+you can create a new repository under
+https://gitlab.com/neurathsboat.blog/posts
+intended to be included as submodules under
+https://gitlab.com/neurathsboat.blog/neurathsboat.blog/content/post
+and published in
+https://neurathsboat.blog.
+
+Before pushing this template in a new repository
+please ensure that:
+1) You have edited the file `.gitlab-ci.yml` accordingly,
+especially the `variables` section at the top of the file
+2) Include any files needed to produce the output markdown file
+inside the `src` directory.

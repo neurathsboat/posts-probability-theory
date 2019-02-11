@@ -1,0 +1,29 @@
+---
+title: "Insert title"
+output:
+  html_document:
+    keep_md: yes
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris
+  pdf_document: default
+---
+
+```{r knitr_opts, cache=FALSE, include=FALSE}
+knitr::opts_chunk$set(fig.path = "img/",
+                      autodep = TRUE,
+                      dpi = 300,
+                      fig.asp = 0.5)
+```
+
+Insert text
+
+Insert figure
+
+```{r test_figure}
+library(ggplot2)
+
+x = runif(10)
+y = runif(10)
+
+qplot(x, y)
+```
