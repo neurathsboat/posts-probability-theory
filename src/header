@@ -1,16 +1,16 @@
 +++
-title = "Insert title"
+title = "Probability Theory"
 
 date = 2019-01-01
 lastmod = 2019-01-01
 draft = false
 
-tags = ["tag"]
-summary = "Insert summary"
-abstract = "Insert summary"
+tags = ["statistics", "Bayesian"]
+summary = "A simple set of unifying principles for statistical inference"
+abstract = "A simple set of unifying principles for statistical inference"
 authors = ["Vassilis Kehayas"]
 hasPlotly = false
 doi = ""
-sourceFile = "src/post-template.Rmd"
+sourceFile = "src/probability-theory.Rmd"
 
 +++

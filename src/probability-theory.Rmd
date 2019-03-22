@@ -1,0 +1,56 @@
+---
+title: "Probability Theory"
+output:
+  html_document:
+    keep_md: yes
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris
+  pdf_document: default
+---
+
+```{r knitr_opts, cache=FALSE, include=FALSE}
+knitr::opts_chunk$set(fig.path = "img/",
+                      autodep = TRUE,
+                      dpi = 300,
+                      fig.asp = 0.5)
+```
+
+Notes from E.T. Jaynes' Probability Theory
+Goal: >How could we build a machine which would carry out useful plausible reasoning, following clearly defined principles expressing an idealized common sense?
+
+Probability Theory is just a generalization of Aristotelian logic (describe what Aristotelian logic is)
+
+Basic desiderata:
+
+I) Degrees of plausibility are represented by real numbers (what is plausibility)
+II) Qualitative Correspondence with common sense
+III) Consistent reasoning: a) If a conclusion can be reasoned out in more than one way, then every possible way must lead to the same result. b) The robot always takes into account all of the evidence it has relevant to a question. It does not arbitrarily ignore some of the information, basing its conclusions only on what remains. In other words, the robot is completely non-ideological. c) The robot always represents equivalent states of knowledge by equivalent plausibility assignments. That is, if in two problems the robot's state of knowledge is the same (except perhaps for the labelling of the propositions), then it must assign the same plausibilities in both.
+
+Two rules follow based on those desiderata from Cox's functional equations:
+1) The product rule
+$$ p(AB|C) = p(A|BC)w(B|C) = p(B|AC)w(A|C) $$ (define symbols)
+2) The sum rule
+$$ p(A|B) + p(\overbar{A}|B) = 1 $$
+
+>Aristotelian deductive logic is the limiting form of our rules for plausible reasoning, as the robot becomes more and more certain of its conclusions.
+
+Issues to discuss:
+* Subjective vs objective (> Anyone who has the same information but comes to a different conclusion than our robot, is necessarily violating one of those desiderata.)  
+* Randomness is not a property of the real world (Mind projection fallacy): shaking an urn does not affect the natural properties of anything, it just makes it impossible that any human will be able to willfully influence the result. It is absurd to think that randomization makes our calculations exact (see CLT). 
+> The notion of "physical probability" must retreat continually from one level to the next, as knowledge advances.  
+* >In virtually all real problems of scientific inference we are in just the opposite situation: the data $D$ are known but the correct hypothesis $H$ is not. Then the problem facing the scientist is of the inverse type; given the data $D$, what is the probability that some specified hypothesis $H$ is true?
+> "What do you know about the hypothesis $H$ after seeing the data $D$?" cannot have any defensible answer unless we take into account: "What did you know abouth $H$ before seeing $D$?" 
+Optional stopping, regularization, "multiple imputation?" are taken care of by default with Bayesian inference
+Inference on small samples is as exact as is for large samples, which is not true with frequentist approach
+How to choose the prior: prior predictive plots for prior elicitation, the exact parameter values when uncertain usually do not matter, unless sample is small in which case you should explicitly mention your prior as just choosing uniform priors may also affect the results and is rarely defensible.
+Need to realize that the frequentist approach is equivalent to the Bayesian approach when using uniform priors, which is fine and faster, as long as you are honest in that you do not have other information
+The practical advantage that you learn the simple unifying principles enabling you to fit the model that you data deserve (bespoke) instead of having to learn seemingly unrelated, ad hoc methods with the frequentist approach (regularization, ancillary statistics, "multiple imputation?", robust methods, meta-analysis, multiple comparison correction). Note that this also means that with frequentist statistics the prior is often hidden in the choice of model and the procedure that one settles on one model over the other is not reported or is not principled. Now that the computers are getting powerful enough, this is evident by the flexibility of Bayesian analysis packages such as brms which can fit very elaborate models with incrementally more effort, instead of the leaps required by someone to learn every new frequentist technique (this needs polishing)
+
+I won't go into Maximum entropy (see Gelman's post) although it seems very powerful in certain settings
+Uncertainty is not a property of the world, it's epistemic all the way through.
+Jaynes' theory is far-reaching, ambitious as it ties together logic and information theory (which I haven't talked about yet), yet is based on apparently defensible desiderata.
+
+Link to article pondering whether Bayesian methods should be the default.
+Based on what we have argued, it probably should be unless the model is simple, you have little to no prior information, and enough data are available, such as in industrial settings and simple crop experiments, like the problems on which Fisher was working on, unless of course you find the Bayesian interpretation of posterior probabilities useful in those case as well.
+
+Limitations: computational overhead (but perhaps variational inference can help in the future), limited adoption in some communities hinders communication
