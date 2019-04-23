@@ -15,10 +15,40 @@ knitr::opts_chunk$set(fig.path = "img/",
                       fig.asp = 0.5)
 ```
 
-Notes from E.T. Jaynes' Probability Theory
-Goal: >How could we build a machine which would carry out useful plausible reasoning, following clearly defined principles expressing an idealized common sense?
+>How could we build a machine which would carry out useful plausible reasoning, following clearly defined principles expressing an idealized common sense?  
 
-Probability Theory is just a generalization of Aristotelian logic (describe what Aristotelian logic is)
+E.T. Jaynes' Probability Theory  
+
+The ideal of systematizing the scientific process
+has been a major pursuit of natural philosophers,
+such as Aristotle, Francis Bacon, Laplace and the Logical Positivists,
+and their descendants, whom we now call scientists.
+Aristotelian logic in particular was concerned with
+the truth of propositions such as
+"Socrates is an animal".
+The major tool of Aristotle's system was deduction,
+drawing conclusions that necessary follow from an argument.
+Much of the later work was focused on providing 
+the theoretical foundations for induction,
+defined by Aristotle as "argument from the particular to the universal" 
+(https://plato.stanford.edu/entries/aristotle-logic/).
+Arguably most of modern science is concerned with induction
+--infering general conclusions from particular evidence.
+The question in the opening quote can serve as a pragmatic abstraction of 
+the primordial ideal in the setting of inductive inference.
+Jaynes's thesis was that probability theory can be viewed as
+our best answer in the attempt to provide a unifying system
+that becomes a generalization of Aristotelian logic
+extended to inferential reasoning.
+Based on a reading of Jaynes' book^[1], "Probability Theory: The Logic of Science",
+we will produce an exposition of theoretical and practical issues
+in light of his arguments on the foundations of probability theory.
+
+Explain a bit parts of the opening quote.
+Why should that be our goal?
+A machine, to avoid going into the subjective/objective debate: if you have information, the machine would benefit to use it, no matter what we call it.
+Plausible reasoning
+Reference to common sense is not to say that common sense is supreme, but rather that if our conclusions are disaggree with some very basic desiderata we should discard the conclusions and the process that lead us to them.
 
 Basic desiderata:
 
@@ -53,4 +83,14 @@ Jaynes' theory is far-reaching, ambitious as it ties together logic and informat
 Link to article pondering whether Bayesian methods should be the default.
 Based on what we have argued, it probably should be unless the model is simple, you have little to no prior information, and enough data are available, such as in industrial settings and simple crop experiments, like the problems on which Fisher was working on, unless of course you find the Bayesian interpretation of posterior probabilities useful in those case as well.
 
+Jaynes' polemic tone is not widespread nowadays, and that's for the better.
+As Bayesianism re-gains traction, it is not needed. 
+Many mix-and-match approaches are widely used (multiple imputation in frequentist inference, regularization which can be seen as one way to incorporate priors).
+
 Limitations: computational overhead (but perhaps variational inference can help in the future), limited adoption in some communities hinders communication
+
+
+[1]: Mostly the first two chapters where he unfolds the foundations of Probability Theory as logic. The rest of the book just extends and further explains the corollaries of those first two chapters.
+
+## References  
+
