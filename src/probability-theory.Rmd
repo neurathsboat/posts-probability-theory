@@ -44,7 +44,6 @@ Based on a reading of Jaynes' book^[1], "Probability Theory: The Logic of Scienc
 we will produce an exposition of theoretical and practical issues
 in light of his arguments on the foundations of probability theory.
 
-Explain a bit parts of the opening quote.
 Why should that be our goal?
 While we may be able to adequately evaluate the relative merit of 
 two propositions or hypotheses that are clearly distinguished from each other,
@@ -53,37 +52,87 @@ increases even slightly beyond that.
 We need a formalized system,
 a mathematical theory,
 to help us reason through those more complicated problems
-and a machine to crunch the numbers.
+--and a machine to crunch the numbers.
 Choosing a machine as the subject that is supposed to execute the reasoning
-has the added benefit,
-except from making it clear that the goal is to write a computer program,
-of avoiding the subjective/objective debate regarding prior information: 
+makes it clear that the goal is to write a computer program
+and has the added benefit of avoiding 
+the subjective/objective debate regarding prior information: 
 the machine would benefit to use all availabe information, 
 no matter what we call it.
 Turning the problem into an engineering challenge
 makes explicit that the challenge is
-to choose the appropriate design principles for our goal
+to choose the appropriate design principles to achieve our goal
 rather than attain a potentially ill-defined truth,
 as has been the case for Logical Positivists.
-Jaynes defines plausible reasoning as a synonym to inference,
+Jaynes defines "plausible reasoning" as a synonym to inference,
 i.e. finding the most plausible answer to a question 
 based on the available information under uncertainty.
-Reference to "common sense" is not to say that 
+The usage of "common sense" does not imply that 
 human reasoning is infallible and always consistent, 
 but rather that if our conclusions disagree with some very basic desiderata 
 we should discard the conclusions and the process that lead us to them.
 
 Basic desiderata:
 
-I) Degrees of plausibility are represented by real numbers (what is plausibility)
-II) Qualitative Correspondence with common sense
-III) Consistent reasoning: a) If a conclusion can be reasoned out in more than one way, then every possible way must lead to the same result. b) The robot always takes into account all of the evidence it has relevant to a question. It does not arbitrarily ignore some of the information, basing its conclusions only on what remains. In other words, the robot is completely non-ideological. c) The robot always represents equivalent states of knowledge by equivalent plausibility assignments. That is, if in two problems the robot's state of knowledge is the same (except perhaps for the labelling of the propositions), then it must assign the same plausibilities in both.
+I) Degrees of plausibility are represented by real numbers  
+
+This is deemed necessary as the machine is required to 
+associate plausibility assignments with some physical quantity
+such as voltage or bits.
+It is not objectionable to adopt the convention that
+a greater number corresponds to greater plausibility
+and that an infinitesimal change corresponds to an
+infinitesimal change in plausibility.
+
+II) Qualitative correspondence with common sense
+
+This basically means that the direction of change 
+must be qualitatively consistent with our intuition.
+For example, if our machine acquires new information $C'$ 
+that updates the previously held information $C$
+in a way that the plausibility of $A$ given $C'$ is increased
+compared to the plausibility of $A$ given $C$
+
+$$ A|C' > A|C  $$
+
+but the plausibility of $B$ is unchanged
+
+$$  B|AC' = B|AC $$
+
+then we should expect that the joint plausibility of $A$ and $B$ 
+can only increase and never decrease
+
+$$  AB|C' \geq AB|C $$
+
+and a decrease in the plausibility that $A$ is false, $\overline{A}$
+
+III) Consistent reasoning: 
+
+a) If a conclusion can be reasoned out in more than one way, 
+then every possible way must lead to the same result.  
+b) The robot always takes into account all of 
+the evidence it has relevant to a question. 
+It does not arbitrarily ignore some of the information, 
+basing its conclusions only on what remains. 
+In other words, the robot is completely non-ideological.  
+c) The robot always represents equivalent states of knowledge 
+by equivalent plausibility assignments. 
+That is, if in two problems the robot's state of knowledge is the same 
+(except perhaps for the labelling of the propositions), 
+then it must assign the same plausibilities in both.  
+
+It is perhaps surprising at first that the above stated conditions
+uniquely identify one set of mathematical operations that obey them.
 
 Two rules follow based on those desiderata from Cox's functional equations:
 1) The product rule
-$$ p(AB|C) = p(A|BC)w(B|C) = p(B|AC)w(A|C) $$ (define symbols)
+
+$$ p(AB|C) = p(A|BC)p(B|C) = p(B|AC)p(A|C) $$ 
+
+(define symbols)
+
 2) The sum rule
-$$ p(A|B) + p(\overbar{A}|B) = 1 $$
+$$ p(A|B) + p(\overline{A}|B) = 1 $$
 
 >Aristotelian deductive logic is the limiting form of our rules for plausible reasoning, as the robot becomes more and more certain of its conclusions.
 
