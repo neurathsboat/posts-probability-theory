@@ -21,7 +21,7 @@ E.T. Jaynes' Probability Theory
 
 The ideal of systematizing the scientific process
 has been a major pursuit of natural philosophers,
-such as Aristotle, Francis Bacon, Laplace and the Logical Positivists,
+such as Aristotle, Francis Bacon, Laplace, the Logical Positivists,
 and their descendants, whom we now call scientists.
 Aristotelian logic in particular was concerned with
 the truth of propositions such as
@@ -41,7 +41,7 @@ our best answer in the attempt to provide a unifying system
 that becomes a generalization of Aristotelian logic
 extended to inferential reasoning.
 Based on a reading of Jaynes' book^[1], "Probability Theory: The Logic of Science",
-we will produce an exposition of theoretical and practical issues
+I will produce an exposition of theoretical and practical issues
 in light of his arguments on the foundations of probability theory.
 
 Why should that be our goal?
@@ -79,7 +79,7 @@ I) Degrees of plausibility are represented by real numbers
 This is deemed necessary as the machine is required to 
 associate plausibility assignments with some physical quantity
 such as voltage or bits.
-It is not objectionable to adopt the convention that
+It does not appear as objectionable to adopt the convention that
 a greater number corresponds to greater plausibility
 and that an infinitesimal change corresponds to an
 infinitesimal change in plausibility.
@@ -104,7 +104,7 @@ can only increase and never decrease
 
 $$  AB|C' \geq AB|C $$
 
-and a decrease in the plausibility that $A$ is false, $\overline{A}$
+and a decrease in the plausibility that $A$ is false, $\overline{A}$.
 
 III) Consistent reasoning: 
 
@@ -124,12 +124,30 @@ then it must assign the same plausibilities in both.
 It is perhaps surprising at first that the above stated conditions
 uniquely identify one set of mathematical operations that obey them.
 
-Two rules follow based on those desiderata from Cox's functional equations:
-1) The product rule
+Two rules follow based on those desiderata from Cox's functional equations:  
+1) The product rule:
+
+If $A$ and $B$ are two statements,
+we seek to calculate the plausibility of their conjuction, $AB$,
+given that $C$ is true, $p(AB|C)$.
+If $B$ is true given $C$,
+then $B|C$ is true.
+For both $A$ and $B$ to be true given that $B|C$ is true
+then $A|BC$ also needs to be true.
+Putting everything together,
+the plausibility of $AB|C$ must be equal the plausibility of both
+$A|BC$ and $B|C$
+
+$$ p(AB|C) = p(A|BC)p(B|C) $$
+But since we could just as well swap the labels of the statements
+$A$ and $B$,
+based on the desideratum III the following relationship 
+should also hold equivalently:
+
+$$ p(AB|C) = p(B|AC)p(A|C) $$
+The product rule combines our results:
 
 $$ p(AB|C) = p(A|BC)p(B|C) = p(B|AC)p(A|C) $$ 
-
-(define symbols)
 
 2) The sum rule
 $$ p(A|B) + p(\overline{A}|B) = 1 $$
