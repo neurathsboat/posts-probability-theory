@@ -152,6 +152,9 @@ $$ p(AB|C) = p(A|BC)p(B|C) = p(B|AC)p(A|C) $$
 2) The sum rule
 $$ p(A|B) + p(\overline{A}|B) = 1 $$
 
+merely expresses the basic Aristotelian postulate that
+if $A$ is true not-$A$, or $\overline{A}$, must be false, and reversely.
+
 >Aristotelian deductive logic is the limiting form of our rules for plausible reasoning, as the robot becomes more and more certain of its conclusions.
 
 Issues to discuss:
