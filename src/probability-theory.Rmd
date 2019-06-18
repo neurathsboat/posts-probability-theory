@@ -33,7 +33,7 @@ the theoretical foundations for induction,
 defined by Aristotle as "argument from the particular to the universal" 
 (https://plato.stanford.edu/entries/aristotle-logic/).
 Arguably most of modern science is concerned with induction
---infering general conclusions from particular evidence.
+---infering general conclusions from particular evidence.
 The question in the opening quote can serve as a pragmatic abstraction of 
 the primordial ideal in the setting of inductive inference.
 Jaynes's thesis was that probability theory can be viewed as
@@ -43,6 +43,8 @@ extended to inferential reasoning.
 Based on a reading of Jaynes' book^[1], "Probability Theory: The Logic of Science",
 I will produce an exposition of theoretical and practical issues
 in light of his arguments on the foundations of probability theory.
+
+## Probability Theory as extended logic  
 
 Why should that be our goal?
 While we may be able to adequately evaluate the relative merit of 
@@ -72,7 +74,7 @@ human reasoning is infallible and always consistent,
 but rather that if our conclusions disagree with some very basic desiderata 
 we should discard the conclusions and the process that lead us to them.
 
-Basic desiderata:
+Jaynes sets up a set of basic desiderata as a starting point for his reasoning:
 
 I) Degrees of plausibility are represented by real numbers  
 
@@ -172,20 +174,20 @@ the probability of the hypothesis before observing the data,
 and $p(E)$ is the normalizing factor when multiple hypotheses are considered,
 for example when considering two competing hypotheses $H_1$ and $H_2$,
 $p(E) = p(E|H_1)p(H_1) + p(E|H_2)p(H_2)$.
-For those trained initially within the frequentist framework 
+For those trained initially within the frequentist framework,
 working under the Bayesian framework leads to questions
 regarding the choice of priors 
 and a re-evaluation of the concept of uncertainty.
 Bayesian inference comes with some benefits in estimating relatively complex
-models that are not possible to fit within the frequentist framework and 
+models that are not as easy to fit within the frequentist framework and 
 a simplification of their interpretation, as well as some drawbacks, 
-mostly revolving around computational burden.
+mostly revolving around computational cost
 We will briefly discuss those issues in the following sections.
 
 ### Priors  
 
 Even for people who accept the conclusions 
-of the logical analysis presented in the previous section
+of the logical analysis presented in the previous section,
 the choice of the prior probability is seen as a thorny issue.
 One objection raised is often that the prior can only be subjectively chosen,
 something which is seen as contradicting the objectivity pursued 
@@ -209,12 +211,14 @@ and $p(y|\theta)$ is the sampling distribution.
 If the prior predictive distribution generates values
 that are beyond what we would consider reasonable
 we must adjust our priors accordingly.
-Of course this method can only narrow down the range of parameter values 
----the exact values are often impossible to define,
-unless we have specific information 
+Of course this method of prior elicitation 
+can only narrow down the range of parameter values 
+---the exact parameter values are often impossible to define,
+unless we have very specific information 
 from previous studies or other expert knowledge.
 In cases where the sample size is adequately large
-the exact values within that reasonable range
+or the prior is not so specific that its influence dominates that of the data,
+the choice of values within that reasonable range
 will make little difference in the end result.
 If, however, the choice of the prior makes a difference for the results,
 it is arguably a useful thing to report it 
@@ -229,18 +233,22 @@ is *a priori* unlikely to take values equal to $- \infty$,
 the Avogadro constant, and everything in between with equal plausibility.
 Using uniform priors results in other problems as well,
 such as edge effects at the parameter space boundaries
-and an inability to converge in the presence of collinearity.
+and an inability to converge in the presence 
+of collinearity among the predictors.
 Granted, there are ways to circumvent those problems in some cases
 under the frequentist framework.
-For instance, the latter problem of collinearity
+For instance, the latter problem that can arise due to collinearity
 can be ameliorated by regularization approaches.
 But it is easy to show [REF: Elements of Statistical Learning] that these are in turn
 equivalent to choosing appropriate priors under the Bayesian framework.
 The difference is that the choice of the equivalent Bayesian priors
 is more principled and can help avoid issues of "double dipping",
-i.e. using the data twice, once to optimise the hyperparameters
-of the frequentist regularization and to then later produce inferences,
+i.e. using the data twice, 
+once to optimise the hyperparameters of the frequentist regularization 
+and to then later produce inferences based on them,
 something that undermines their predictive ability.
+
+### Conceptual juxtaposition of Bayesian and frequentist inference  
 
 
 
