@@ -250,7 +250,43 @@ something that undermines their predictive ability.
 
 ### Conceptual juxtaposition of Bayesian and frequentist inference  
 
+The basic goal of the frequentist approach is to
+estimate how likely are the data we observed, $y$,
+given a set of parameters, $\theta$,
+designated as $p(y|\theta)$.
+Often, though, what experimenters want to know is the reverse,
+i.e. how likely is a hypothesis $H$,
+which can and often does involve 
+a range of parameter values instead of single values,
+given the data $D$ we observed, $p(H|D)$.
+This is the quantity that the Bayesian analysis is designed to estimate.
+The Bayesian approach takes the observed data as definite,
+measurement errors and all,
+and considers that the final source of uncertainty is epistemic,
+arising due to lack of information.
+The frequentist approach considers 
+the uncertainty in the data is ireeducible, or aleatoric.
+The tension between the two approaches on this matter is a philosophical issue
+that cannot be easily resolved.
+One the one hand, randomness can always be reduced 
+to progressively lower levels of description
+but it is an open question whether it can be completely eliminated.
+For example, the exact position an arrow is going to end its trajectory
+can be difficult to determine
+---that is why archery is an interesting sport to some.
+But, in principle, if we had information about all the relevant parameters,
+up to a complete description of the wind patterns and the gravitational field,
+we should be able to predict the arrow's final position with infinite precision.
+However, it ultimately boils down to the question of whether
+the universe is deterministic which must involve 
+some discussion around the state of quantum physics,
+for which I will not attempt a full exposition.
+However, in practice, the Bayesian approach matches better the way scientists think:
 
+question whether the universe is deterministic - quantum physics
+that I am not prepared to attempt a full exposition.
+However, in practice, the Bayesian approach matches better the way scientists think: if you care about ... then you must tell us what you knew ...
+Of course, someone can choose to be "externally inconsistent" and act as if all uncertainty is aleatoric if it simplifies the calculations
 
 * Subjective vs objective (> Anyone who has the same information but comes to a different conclusion than our robot, is necessarily violating one of those desiderata.)  
 How to choose the prior: prior predictive plots for prior elicitation, the exact parameter values when uncertain usually do not matter, unless sample is small in which case you should explicitly mention your prior as just choosing uniform priors may also affect the results and is rarely defensible.
