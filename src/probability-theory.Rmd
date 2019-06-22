@@ -255,16 +255,14 @@ estimate how likely are the data we observed, $y$,
 given a set of parameters, $\theta$,
 designated as $p(y|\theta)$.
 It thus considers that the uncertainty in the data is irreducible, or aleatoric.
-Often, though, what experimenters want to know is the reverse,
-i.e. how likely is a hypothesis $H$,
-which can and often does involve 
-a range of parameter values instead of single values,
+The Bayesian approach is designed to estimate
+how likely a hypothesis $H$ is,
 given the data $D$ we observed, $p(H|D)$.
-This is the quantity that the Bayesian analysis is designed to estimate.
-The Bayesian approach takes the observed data as definite,
+Hence it takes the observed data as definite,
 measurement errors and all,
 and considers that the final source of uncertainty is epistemic,
 arising due to lack of information.
+
 The tension between the two approaches on this matter is a philosophical issue
 that cannot be easily resolved.
 One the one hand, randomness can always be reduced 
@@ -275,16 +273,46 @@ can be difficult to determine
 ---that is why archery is an interesting sport to some.
 But, in principle, if we had information about all the relevant parameters,
 down to a complete description of the wind patterns and the gravitational field,
-we should be able to predict the arrow's final position with infinite precision.
-However, it ultimately boils down to the question of whether
+we should be able to precisely predict the arrow's final position.
+Ultimately, it boils down to the question of whether
 the universe is deterministic, which must involve 
 some discussion around the state of quantum physics
 that still appears to remain unresolved.
-However, in practice, the Bayesian approach matches better the way scientists think:
+ 
+In practice, though, it rarely is relevant for experimenters
+to invoke levels of description that involve quantum physics.
+The choice of analytical framework is most often made
+based on the particular goals of the scientific question at hand.
+In situations where the models specified are relatively simple
+and the samples considered are large enough
+it is sufficient to adopt the frequentist approach
+to get an accurate answer fast.
+However, in actual scientific problems
+the underlying models are, or should be,
+complicated to a degree that the frequentist approach does not provide
+satisfactorily powerful tools.
+Furthermore, if the question asked is 
+"What have I learned from the data regarding my hypothesis
+after seeing the data?",
+it cannot be reasonably answered unless 
+the available information about the hypothesis before seeing the data 
+is also specified.
+
+DISCUSS ALL AD-HOC TOOLS
+Another important point is that within the standard frequentist framework
+it is not possible to evaluate the plausibility that your model's
+estimated parameter values are within or outside a range,
+although *ad hoc* tools, such as 
+[equivalence tests](https://doingbayesiandataanalysis.blogspot.com/2017/02/equivalence-testing-two-one-sided-test.html), 
+have been proposed.
 
 question whether the universe is deterministic - quantum physics
 that I am not prepared to attempt a full exposition.
-However, in practice, the Bayesian approach matches better the way scientists think: if you care about ... then you must tell us what you knew ...
+However, in practice, the Bayesian approach matches better the way scientists
+Often, though, what experimenters want to know is the reverse,
+which can and often does involve 
+a range of parameter values instead of single values,
+think: if you care about ... then you must tell us what you knew ...
 Of course, someone can choose to be "externally inconsistent" and act as if all uncertainty is aleatoric if it simplifies the calculations, which is a reasonable approach for simple models.
 
 * Subjective vs objective (> Anyone who has the same information but comes to a different conclusion than our robot, is necessarily violating one of those desiderata.)  
@@ -296,6 +324,7 @@ Need to realize that the frequentist approach is equivalent to the Bayesian appr
 * Randomness is not a property of the real world (Mind projection fallacy): shaking an urn does not affect the natural properties of anything, it just makes it impossible that any human will be able to willfully influence the result. It is absurd to think that randomization makes our calculations exact (see CLT). 
 > The notion of "physical probability" must retreat continually from one level to the next, as knowledge advances.  
 Uncertainty is not a property of the world, it's epistemic all the way through.
+
 Optional stopping, regularization, "multiple imputation?" are taken care of by default with Bayesian inference
 Inference on small samples is as exact as is for large samples, which is not true with frequentist approach
 The practical advantage that you learn the simple unifying principles enabling you to fit the model that you data deserve (bespoke) instead of having to learn seemingly unrelated, ad hoc methods with the frequentist approach (regularization, ancillary statistics, "multiple imputation?", robust methods, meta-analysis, multiple comparison correction). Note that this also means that with frequentist statistics the prior is often hidden in the choice of model and the procedure that one settles on one model over the other is not reported or is not principled. Now that the computers are getting powerful enough, this is evident by the flexibility of Bayesian analysis packages such as brms which can fit very elaborate models with incrementally more effort, instead of the leaps required by someone to learn every new frequentist technique (this needs polishing)
