@@ -155,7 +155,7 @@ $$ p(AB|C) = p(A|BC)p(B|C) = p(B|AC)p(A|C) $$
 2) The sum rule
 $$ p(A|B) + p(\overline{A}|B) = 1 $$
 
-merely expresses the basic Aristotelian postulate that
+merely extends the basic Aristotelian postulate according to which
 if $A$ is true, then not-$A$, or $\overline{A}$, must be false, and reversely.
 
 >Aristotelian deductive logic is the limiting form of our rules for plausible reasoning, as the robot becomes more and more certain of its conclusions.
@@ -181,7 +181,7 @@ and a re-evaluation of the concept of uncertainty.
 Bayesian inference comes with some benefits in estimating relatively complex
 models that are not as easy to fit within the frequentist framework and 
 a simplification of their interpretation, as well as some drawbacks, 
-mostly revolving around computational cost
+mostly revolving around computational cost.
 We will briefly discuss those issues in the following sections.
 
 ### The choice of priors  
@@ -231,7 +231,7 @@ since there is always some additional information:
 the coefficient of your experimental variable 
 is *a priori* unlikely to take values equal to $- \infty$, 
 the Avogadro constant, and everything in between with equal plausibility.
-Using uniform priors results in other problems as well,
+Using uniform priors often results in other problems as well,
 such as edge effects at the parameter space boundaries
 and an inability to converge in the presence 
 of collinearity among the predictors.
@@ -256,7 +256,8 @@ The basic goal of the frequentist approach is to
 estimate how likely are the data we observed, $y$,
 given a set of fixed parameters, $\theta$,
 designated as $p(y|\theta)$.
-It thus considers that the uncertainty in the data is irreducible, or aleatoric.
+It, thus, considers that the uncertainty in the data is irreducible, 
+or aleatoric.
 Data distributions are chosen based on imaginary projections
 to future samples generated from the same process.
 The goal has traditionally been to minimise our prediction error
@@ -270,9 +271,9 @@ and considers that the final source of uncertainty is epistemic,
 arising due to lack of information.
 Since often our hypotheses are defined
 to encompass a range of values
-probability distributions are asigned over a model's parameters.
+probability distributions are assigned over a model's parameters.
 The goal is to update our beliefs
-to those that are more consistent with the observed data.
+to new ones that are more consistent with the observed data.
 
 The tension between the two approaches on this matter is a philosophical issue
 that cannot be easily resolved.
