@@ -325,14 +325,26 @@ as Bayesian posterior probabilities
 "*How likely is my hypothesis given the observed data?*".
 The opposite misunderstanding is much more rarely observed.
 
-Using Bayesian inference has another practical advantage: 
-once you learn its simple unifying principles 
-they enable you to 
-[fit the model that your data deserve](https://betanalpha.github.io/assets/case_studies/modeling_and_inference.html)
-instead of having to learn seemingly unrelated, ad hoc methods 
-as with the frequentist approach (e.g. regularization, multiple imputation, 
-robust statistics, meta-analysis, multiple comparison corrections). 
-Note that this also means that with frequentist statistics the prior is often hidden in the choice of model and the procedure by which one settles on one model over the other is not reported or is not principled. Now that the computers are getting powerful enough, this is evident by the flexibility of Bayesian analysis packages such as brms which can fit very elaborate models with incrementally more effort, instead of the leaps required by someone to learn every new frequentist technique (this needs polishing)
+Another practical advantage that Bayesian inference has
+over frequentist statistics is that through its simple unifying principles
+the Bayesian analyst is enabled to 
+more easily combine different analytical techniques
+compared with the seemingly unrelated methods
+of the frequentist framework
+(e.g. regularization, multiple imputation, robust statistics, meta-analysis,
+multiple comparison corrections).
+As a consequence, the Bayesian can come closer to fitting 
+[the model that the data deserve](https://betanalpha.github.io/assets/case_studies/modeling_and_inference.html)
+instead of being restricted by feasibility constraints.
+Opportunities to make more principled model choices
+instead of culture that avoids facing shortcomings that
+cannot all be addressed at the same time
+and are imperceptible or, worse, swept under the rug.
+
+
+Note that this also means that with frequentist statistics the prior is often hidden in the choice of model and the procedure by which one settles on one model over the other is not reported or is not principled. 
+
+Now that the computers are getting powerful enough, this is evident by the flexibility of Bayesian analysis packages such as brms which can fit very elaborate models with incrementally more effort, instead of the leaps required by someone to learn every new frequentist technique (this needs polishing)
 
 I won't go into Maximum entropy (see Gelman's post) although it seems very powerful in certain settings
 Jaynes' theory is far-reaching, ambitious as it ties together logic and information theory (which I haven't talked about yet), yet is based on apparently defensible desiderata.
@@ -341,9 +353,10 @@ Link to article pondering whether Bayesian methods should be the default:
 http://babieslearninglanguage.blogspot.com/2018/02/mixed-effects-models-is-it-time-to-go.html.
 Based on what we have argued, it probably should be unless the model is simple, you have little to no prior information, and enough data are available, such as in industrial settings and simple crop experiments, like the problems on which Fisher was working on, unless of course you find the Bayesian interpretation of posterior probabilities useful in those case as well.
 
-##### Obstacles in adoption of Bayesian inference  
+##### Obstacles for the adoption of Bayesian inference and limitations  
 
 Limitations: computational overhead (but perhaps variational inference can help in the future), limited adoption in some communities hinders communication
+More recent results question uniqueness of Bayesian inference as a reasoning framework about uncertainty and its generality (finite/infinite)
 
 ##### Mixed approaches  
 
