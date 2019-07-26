@@ -336,10 +336,13 @@ multiple comparison corrections).
 As a consequence, the Bayesian can come closer to fitting 
 [the model that the data deserve](https://betanalpha.github.io/assets/case_studies/modeling_and_inference.html)
 instead of being restricted by feasibility constraints.
-Opportunities to make more principled model choices
-instead of culture that avoids facing shortcomings that
-cannot all be addressed at the same time
-and are imperceptible or, worse, swept under the rug.
+The impetus towards adherence to simple unifying principles 
+under the Bayesian framework 
+raises opportunities to make more principled modelling choices.
+In contrast, within the frequentist framework
+one often faces challenges that cannot all be addressed at the same time
+that often become imperceptible as a consequence
+or, worse, are swept under the rug.
 
 
 Note that this also means that with frequentist statistics the prior is often hidden in the choice of model and the procedure by which one settles on one model over the other is not reported or is not principled. 
