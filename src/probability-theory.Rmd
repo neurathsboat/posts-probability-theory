@@ -331,8 +331,7 @@ the Bayesian analyst is enabled to
 more easily combine different analytical techniques
 compared with the seemingly unrelated methods
 of the frequentist framework
-(e.g. regularization, multiple imputation, robust statistics, meta-analysis,
-multiple comparison corrections).
+(e.g. regularization, multiple imputation, robust statistics, meta-analysis, "mixed models").
 As a consequence, the Bayesian can come closer to fitting 
 [the model that the data deserve](https://betanalpha.github.io/assets/case_studies/modeling_and_inference.html)
 instead of being restricted by feasibility constraints.
@@ -341,25 +340,31 @@ under the Bayesian framework
 raises opportunities to make more principled modelling choices.
 In contrast, within the frequentist framework
 one often faces challenges that cannot all be addressed at the same time
-that often become imperceptible as a consequence
-or, worse, are swept under the rug.
+and can become incospicuous as a consequence
+or, worse, be swept under the rug.
 
-
-Note that this also means that with frequentist statistics the prior is often hidden in the choice of model and the procedure by which one settles on one model over the other is not reported or is not principled. 
-
-Now that the computers are getting powerful enough, this is evident by the flexibility of Bayesian analysis packages such as brms which can fit very elaborate models with incrementally more effort, instead of the leaps required by someone to learn every new frequentist technique (this needs polishing)
-
-I won't go into Maximum entropy (see Gelman's post) although it seems very powerful in certain settings
-Jaynes' theory is far-reaching, ambitious as it ties together logic and information theory (which I haven't talked about yet), yet is based on apparently defensible desiderata.
-
-Link to article pondering whether Bayesian methods should be the default:
-http://babieslearninglanguage.blogspot.com/2018/02/mixed-effects-models-is-it-time-to-go.html.
-Based on what we have argued, it probably should be unless the model is simple, you have little to no prior information, and enough data are available, such as in industrial settings and simple crop experiments, like the problems on which Fisher was working on, unless of course you find the Bayesian interpretation of posterior probabilities useful in those case as well.
+Based on the discussion so far,
+[one is left wondering whether Bayesian methods should be considered
+as the default method for statistical inference](http://babieslearninglanguage.blogspot.com/2018/02/mixed-effects-models-is-it-time-to-go.html),
+especially in cases where the research question can be framed
+as a [hierarchical/mixed-effects/varying intercept and/or slope model estimation problem]({{< ref "/post/glmm-examples/index.md" >}}).
+I would argue that they probably should, 
+unless the model is simple, 
+you have little to no prior information, 
+and enough data are available,
+unless you find the Bayesian interpretation of posterior probabilities 
+useful in those case as well and computational cost is not a major concern.
+With the advent of user-friendly, yet powerful software packages such as [`brms`](https://cran.r-project.org/web/packages/brms/index.html)
+and the continuous increase in computational power
+there is little reason for those convinced by argumentation
+along similar lines to those followed in this blog post to hold back.
 
 ##### Obstacles for the adoption of Bayesian inference and limitations  
 
 Limitations: computational overhead (but perhaps variational inference can help in the future), limited adoption in some communities hinders communication
 More recent results question uniqueness of Bayesian inference as a reasoning framework about uncertainty and its generality (finite/infinite)
+Different conceptualizations of Bayesian uncertainty (Cox/Jaynes, de Finetti)
+https://www2.stat.duke.edu/courses/Spring08/sta122/Handouts/EfronWhyEveryone.pdf
 
 ##### Mixed approaches  
 
@@ -368,12 +373,14 @@ As Bayesianism re-gains traction, it is not needed.
 Many mix-and-match approaches are widely used (multiple imputation in frequentist inference, regularization which can be seen as one way to incorporate priors).
 https://simplystatistics.org/2014/10/13/as-an-applied-statistician-i-find-the-frequentists-versus-bayesians-debate-completely-inconsequential/
 
+I won't go into Maximum entropy (see Gelman's post) although it seems very powerful in certain settings
+Jaynes' theory is far-reaching, ambitious as it ties together logic and information theory (which I haven't talked about yet), yet is based on apparently defensible desiderata.
 
 [1]: Mostly the first two chapters where he unfolds the foundations of Probability Theory as logic. The rest of the book just extends and further explains the corollaries of those first two chapters.
 
 [2]: Even if useful to understand some differences between the Bayesian and the frequentist frameworks, this statement is simplifying some of the underlying conceptual differences which we will discuss later.
 
-[3]: Similar points can be made regarding other frequentist tools such as [equivalence tests](https://doingbayesiandataanalysis.blogspot.com/2017/02/equivalence-testing-two-one-sided-test.html) and the perils of practices such as [repeated sampling](https://statmodeling.stat.columbia.edu/2014/02/13/stopping-rules-bayesian-analysis/), which are a lesser concern for Bayesian inference.
+[3]: Similar points can be made regarding other frequentist tools such as [equivalence tests](https://doingbayesiandataanalysis.blogspot.com/2017/02/equivalence-testing-two-one-sided-test.html) and the perils of practices such as [repeated sampling](https://statmodeling.stat.columbia.edu/2014/02/13/stopping-rules-bayesian-analysis/), which both are of lesser concern for Bayesian inference.
 
 ## References  
 
