@@ -26,21 +26,23 @@ and their descendants, whom we now call scientists.
 Aristotelian logic, in particular, was concerned with
 the truth of propositions such as
 "Socrates is an animal".
-The major tool of Aristotle's system was deduction,
-drawing conclusions that necessarily follow from an argument.
+The major tool of Aristotle's system was deduction
+---drawing conclusions that necessarily follow from an argument.
 Much of the later work was focused on providing 
 the theoretical foundations for induction,
 [defined by Aristotle](https://plato.stanford.edu/entries/aristotle-logic/)
-as "argument from the particular to the universal".
-Arguably most of modern science is concerned with induction
----infering general conclusions from particular evidence.
+as "argument from the particular to the universal",
+i.e. infering general conclusions from particular evidence.
+Arguably most of modern science is concerned 
+with induction rather than deduction.
 The question in the opening quote can serve as a pragmatic abstraction of 
 the primordial ideal in the setting of inductive inference.
 Jaynes's thesis was that probability theory can be viewed as
 our best answer in the attempt to provide a unifying system
-that becomes a generalization of Aristotelian logic
+that can serve as a generalization of Aristotelian logic
 extended to inferential reasoning.
-Based on a reading of Jaynes' book^[1], "Probability Theory: The Logic of Science",
+Based on a reading of Jaynes' book^[1], 
+"Probability Theory: The Logic of Science" [REFERENCE],
 I will produce an exposition of theoretical and practical issues
 in light of his arguments on the foundations of probability theory.
 
@@ -70,8 +72,8 @@ Jaynes defines "plausible reasoning" as a synonym to inference,
 i.e. finding the most plausible answer to a question 
 based on the available information under uncertainty.
 The usage of "common sense" does not imply that 
-human reasoning is infallible and always consistent, 
-but rather that if our conclusions disagree with some very basic desiderata 
+human reasoning is infallible or always consistent, 
+but rather that if our conclusions disagree with some basic desiderata 
 we should discard the conclusions and the process that lead us to them.
 
 Jaynes sets up a set of basic desiderata as a starting point for his reasoning:
@@ -83,7 +85,7 @@ associate plausibility assignments with some physical quantity
 such as voltage or bits.
 It does not appear as objectionable to adopt the convention that
 a greater number corresponds to greater plausibility
-and that an infinitesimal change corresponds to an
+and that an infinitesimal change of probability corresponds to an
 infinitesimal change in plausibility.
 
 II) Qualitative correspondence with common sense
@@ -126,7 +128,8 @@ then it must assign the same plausibilities in both.
 It is perhaps surprising at first that the above-stated conditions
 uniquely identify one set of mathematical operations that obey them.
 
-Two rules follow based on those desiderata from Cox's functional equations:
+Two rules follow based on those desiderata from 
+[Cox's functional equations](https://en.wikipedia.org/wiki/Cox's_theorem):
 
 1) The product rule:
 
@@ -159,6 +162,8 @@ merely extends the basic Aristotelian postulate according to which
 if $A$ is true, then not-$A$, or $\overline{A}$, must be false, and reversely.
 
 >Aristotelian deductive logic is the limiting form of our rules for plausible reasoning, as the robot becomes more and more certain of its conclusions.
+
+E.T. Jaynes' Probability Theory  
 
 ## Discussion  
 
@@ -196,8 +201,9 @@ It, thus, considers that the uncertainty in the data is irreducible,
 or aleatoric.
 Data distributions are chosen based on imaginary projections
 to future samples generated from the same process.
-The goal has traditionally been to minimise our prediction error
+The goal has traditionally been to minimise the model's prediction error
 on future samples.
+
 The Bayesian approach is designed to estimate
 how likely a hypothesis $H$ is,
 given the data $D$ we observed, $p(H|D)$.
@@ -211,12 +217,12 @@ probability distributions are assigned over a model's parameters.
 The goal is to update our beliefs
 to new ones that are more consistent with the observed data.
 
-The tension between the two approaches on this matter is a philosophical issue
-that cannot be easily resolved.
+The tension between the two approaches on the nature of uncertainty
+delineates a philosophical issue that cannot be easily resolved.
 One the one hand, randomness can always be reduced 
 to progressively lower levels of description,
 but on the other it is an open question whether it can be completely eliminated.
-For example, the exact position an arrow is going to end its trajectory
+For example, the exact position an arrow is going to land on
 can be difficult to determine
 ---that is why archery is an interesting sport to some.
 But, in principle, if we had information about all the relevant parameters,
@@ -255,7 +261,7 @@ Even for people who accept the conclusions
 of the logical analysis presented in the opening section,
 the choice of the prior probability is seen as a thorny issue.
 One objection raised is often that the prior can only be subjectively chosen,
-something which is seen as contradicting the objectivity pursued 
+something which is seen as going against the objectivity pursued 
 in scientific practice.
 However, whereas the choice of the prior probability is in one sense subjective,
 as it is relative to the information available to the agent doing the reasoning,
@@ -343,6 +349,8 @@ one often faces challenges that cannot all be addressed at the same time
 and can become incospicuous as a consequence
 or, worse, be swept under the rug.
 
+Likelihood school, Fisherian inference, Neymar-Pearson mix-up
+
 Based on the discussion so far,
 [one is left wondering whether Bayesian methods should be considered
 as the default method for statistical inference](http://babieslearninglanguage.blogspot.com/2018/02/mixed-effects-models-is-it-time-to-go.html),
@@ -365,6 +373,7 @@ Limitations: computational overhead (but perhaps variational inference can help 
 More recent results question uniqueness of Bayesian inference as a reasoning framework about uncertainty and its generality (finite/infinite)
 Different conceptualizations of Bayesian uncertainty (Cox/Jaynes, de Finetti)
 https://www2.stat.duke.edu/courses/Spring08/sta122/Handouts/EfronWhyEveryone.pdf
+prior specification: prior predictive plots, sensitivity analysis, maximum entropy, critic's priors
 
 ##### Mixed approaches  
 
@@ -372,6 +381,7 @@ Jaynes' polemic tone is not widespread nowadays, and that's for the better.
 As Bayesianism re-gains traction, it is not needed. 
 Many mix-and-match approaches are widely used (multiple imputation in frequentist inference, regularization which can be seen as one way to incorporate priors).
 https://simplystatistics.org/2014/10/13/as-an-applied-statistician-i-find-the-frequentists-versus-bayesians-debate-completely-inconsequential/
+Empirical Bayes
 
 I won't go into Maximum entropy (see Gelman's post) although it seems very powerful in certain settings
 Jaynes' theory is far-reaching, ambitious as it ties together logic and information theory (which I haven't talked about yet), yet is based on apparently defensible desiderata.
