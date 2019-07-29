@@ -322,7 +322,7 @@ something that undermines their predictive ability^[3].
 ##### Paedagogical value  
 
 Another important factor based on which someone may prefer the Bayesian approach
-is that it more closely matches
+is that it appears to more closely match
 the way that scientists tend to think
 as is evident by the observation that it is very often the case
 that frequentist $p$-values are misinterpreted
@@ -337,7 +337,7 @@ the Bayesian analyst is enabled to
 more easily combine different analytical techniques
 compared with the seemingly unrelated methods
 of the frequentist framework
-(e.g. regularization, multiple imputation, robust statistics, meta-analysis, "mixed models").
+(e.g. regularization, multiple imputation, robust statistics, meta-analysis, "mixed models")^[4].
 As a consequence, the Bayesian can come closer to fitting 
 [the model that the data deserve](https://betanalpha.github.io/assets/case_studies/modeling_and_inference.html)
 instead of being restricted by feasibility constraints.
@@ -382,6 +382,9 @@ As Bayesianism re-gains traction, it is not needed.
 Many mix-and-match approaches are widely used (multiple imputation in frequentist inference, regularization which can be seen as one way to incorporate priors).
 https://simplystatistics.org/2014/10/13/as-an-applied-statistician-i-find-the-frequentists-versus-bayesians-debate-completely-inconsequential/
 Empirical Bayes
+mixed models
+There are only few theoretical issues on which the two approaches
+patently disagree: multiple comparisons, sequential testing, Finite population sampling [https://www2.stat.duke.edu/~berger/papers/interplay.pdf]
 
 I won't go into Maximum entropy (see Gelman's post) although it seems very powerful in certain settings
 Jaynes' theory is far-reaching, ambitious as it ties together logic and information theory (which I haven't talked about yet), yet is based on apparently defensible desiderata.
@@ -391,6 +394,14 @@ Jaynes' theory is far-reaching, ambitious as it ties together logic and informat
 [2]: Even if useful to understand some differences between the Bayesian and the frequentist frameworks, this statement is simplifying some of the underlying conceptual differences which we will discuss later.
 
 [3]: Similar points can be made regarding other frequentist tools such as [equivalence tests](https://doingbayesiandataanalysis.blogspot.com/2017/02/equivalence-testing-two-one-sided-test.html) and the perils of practices such as [repeated sampling](https://statmodeling.stat.columbia.edu/2014/02/13/stopping-rules-bayesian-analysis/), which both are of lesser concern for Bayesian inference.
+
+[4]: Even if the frequentist framework is based on 
+[Kolmogorov's axioms](https://en.wikipedia.org/wiki/Probability_axioms), 
+when it comes to inference following one of the different schools of thought 
+can lead to incogruent conceptualizations: 
+the [Likelihood school](https://en.wikipedia.org/wiki/Likelihoodist_statistics), 
+[Fisherian significance testing framework, and Neymar-Pearson's hypothesis testing framework](https://en.wikipedia.org/wiki/Foundations_of_statistics)
+
 
 ## References  
 
