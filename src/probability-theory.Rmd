@@ -349,8 +349,6 @@ one often faces challenges that cannot all be addressed at the same time
 and can become incospicuous as a consequence
 or, worse, be swept under the rug.
 
-Likelihood school, Fisherian inference, Neymar-Pearson mix-up
-
 Based on the discussion so far,
 [one is left wondering whether Bayesian methods should be considered
 as the default method for statistical inference](http://babieslearninglanguage.blogspot.com/2018/02/mixed-effects-models-is-it-time-to-go.html),
@@ -359,15 +357,38 @@ as a [hierarchical/mixed-effects/varying intercept and/or slope model estimation
 I would argue that they probably should, 
 unless the model is simple, 
 you have little to no prior information, 
-and enough data are available,
-unless you find the Bayesian interpretation of posterior probabilities 
+and enough data are available
+---unless you find the Bayesian interpretation of posterior probabilities 
 useful in those case as well and computational cost is not a major concern.
 With the advent of user-friendly, yet powerful software packages such as [`brms`](https://cran.r-project.org/web/packages/brms/index.html)
 and the continuous increase in computational power
 there is little reason for those convinced by argumentation
 along similar lines to those followed in this blog post to hold back.
+I will explore the super-powers `brms` can give you 
+in separate blog posts to follow.
 
 ##### Obstacles for the adoption of Bayesian inference and limitations  
+
+Although Bayesian inference had a head start with the work of
+Bayes and Laplace, among others,
+progress stalled,
+in large part due to the fact that problems 
+beyond the most simple cases where analytically intractable.
+A breakthrough that lead to increased adoption of Bayesian inference
+was the development of sampling methods such as
+[Markov-chain Monte Carlo](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) (MCMC)
+that required intensive computer simulations.
+[More refined algorithms](https://arxiv.org/pdf/1111.4246.pdf) are now in wide use
+but those too require lengthier computation times
+as compared to approximate frequentist inference,
+although of comparable orders of magnitude for simple models.
+Perhaps variational (Bayesian) inference methods 
+will be more used in the future 
+as they usually run faster compared to sampling methods,
+although their results are also approximate.
+
+![](https://raw.githubusercontent.com/chi-feng/mcmc-demo/master/docs/hmc.gif)
+
 
 Limitations: computational overhead (but perhaps variational inference can help in the future), limited adoption in some communities hinders communication
 More recent results question uniqueness of Bayesian inference as a reasoning framework about uncertainty and its generality (finite/infinite)
@@ -397,10 +418,10 @@ Jaynes' theory is far-reaching, ambitious as it ties together logic and informat
 
 [4]: Even if the frequentist framework is based on 
 [Kolmogorov's axioms](https://en.wikipedia.org/wiki/Probability_axioms), 
-when it comes to inference following one of the different schools of thought 
-can lead to incogruent conceptualizations: 
-the [Likelihood school](https://en.wikipedia.org/wiki/Likelihoodist_statistics), 
-[Fisherian significance testing framework, and Neymar-Pearson's hypothesis testing framework](https://en.wikipedia.org/wiki/Foundations_of_statistics)
+when it comes to inference 
+following one of the different sub-schools of thought
+(the [Likelihood school](https://en.wikipedia.org/wiki/Likelihoodist_statistics), 
+[Fisherian significance testing framework, and Neymar-Pearson's hypothesis testing framework](https://en.wikipedia.org/wiki/Foundations_of_statistics)) can lead to incongruent conceptualizations.
 
 
 ## References  
