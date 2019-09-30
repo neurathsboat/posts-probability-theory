@@ -235,7 +235,7 @@ that still appears to remain unresolved.
  
 #### Practical considerations  
 
-In practice, though, it rarely is relevant for experimenters
+In practice, though, it rarely is relevant for most experimenters
 to invoke levels of description that involve quantum physics.
 The choice of analytical framework is most often made
 based on the particular goals of the scientific question at hand.
@@ -292,8 +292,8 @@ or the prior is not so specific that its influence dominates that of the data,
 the choice of values within that reasonable range
 will make little difference in the end result.
 If, however, the choice of the prior makes a difference for the results,
-it is arguably a useful thing to report it 
-so that people can evaluate its reasonableness.
+it is arguably a useful feature of the analytical framework 
+to be able to report it so that people can evaluate its reasonableness.
 
 The alternative of using frequentist inference,
 which is equivalent to assumming a uniform prior^[2],
@@ -328,14 +328,14 @@ as is evident by the observation that it is very often the case
 that frequentist $p$-values are misinterpreted
 as Bayesian posterior probabilities
 ---as if answering the question 
-"*How likely is my hypothesis given the observed data?*".
+"*How likely is my hypothesis given the observed data?*" [CITATION NEEDED].
 The opposite misunderstanding is much more rarely observed.
 
 Another practical advantage that Bayesian inference has
 over frequentist statistics is that through its simple unifying principles
 the Bayesian analyst is enabled to 
 more easily combine different analytical techniques
-compared with the seemingly unrelated methods
+compared to the seemingly unrelated methods
 of the frequentist framework
 (e.g. regularization, multiple imputation, robust statistics, meta-analysis, "mixed models")^[4].
 As a consequence, the Bayesian can come closer to fitting 
@@ -387,8 +387,7 @@ will be more used in the future
 as they usually run faster compared to sampling methods,
 although their results are also approximate.
 
-![](https://raw.githubusercontent.com/chi-feng/mcmc-demo/master/docs/hmc.gif)
-
+{{< figure src="https://raw.githubusercontent.com/chi-feng/mcmc-demo/master/docs/hmc.gif" title="Testing caption" lightbox="true" >}}
 
 Limitations: computational overhead (but perhaps variational inference can help in the future), limited adoption in some communities hinders communication
 More recent results question uniqueness of Bayesian inference as a reasoning framework about uncertainty and its generality (finite/infinite)
