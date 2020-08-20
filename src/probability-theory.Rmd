@@ -37,18 +37,18 @@ Arguably most of modern science is concerned
 with induction rather than deduction.
 The question in the opening quote can serve as a pragmatic abstraction of 
 the primordial ideal in the setting of inductive inference.
-Jaynes's thesis was that probability theory can be viewed as
+Jaynes's thesis [REF] was that probability theory can be viewed as
 our best answer in the attempt to provide a unifying system
 that can serve as a generalization of Aristotelian logic
 extended to inferential reasoning.
 Based on a reading of Jaynes' book^[1], 
-"Probability Theory: The Logic of Science" [REFERENCE],
+"Probability Theory: The Logic of Science",
 I will produce an exposition of theoretical and practical issues
 in light of his arguments on the foundations of probability theory.
 
 ## Probability Theory as extended logic  
 
-Why should that be our goal?
+Why should the systemization of inferential reasoning be our goal?
 While we may be able to adequately evaluate the relative merit of 
 two propositions or hypotheses that are clearly distinguished from each other,
 we are helpless once the number of hypotheses or of the relevant parameters
@@ -71,7 +71,7 @@ as has been the case for Logical Positivists.
 Jaynes defines "plausible reasoning" as a synonym to inference,
 i.e. finding the most plausible answer to a question 
 based on the available information under uncertainty.
-The usage of "common sense" does not imply that 
+The usage of "common sense" in the opening statement does not imply that 
 human reasoning is infallible or always consistent, 
 but rather that if our conclusions disagree with some basic desiderata 
 we should discard the conclusions and the process that lead us to them.
@@ -80,7 +80,7 @@ Jaynes sets up a set of basic desiderata as a starting point for his reasoning:
 
 I) Degrees of plausibility are represented by real numbers  
 
-This is deemed necessary as the machine is required to 
+This desideratum is deemed necessary as the machine is required to 
 associate plausibility assignments with some physical quantity
 such as voltage or bits.
 It does not appear as objectionable to adopt the convention that
@@ -260,7 +260,7 @@ is also specified.
 Even for people who accept the conclusions 
 of the logical analysis presented in the opening section,
 the choice of the prior probability is seen as a thorny issue.
-One objection raised is often that the prior can only be subjectively chosen,
+One objection often raised is that the prior can only be subjectively chosen,
 something which is seen as going against the objectivity pursued 
 in scientific practice.
 However, whereas the choice of the prior probability is in one sense subjective,
@@ -302,7 +302,7 @@ since there is always some additional information:
 the coefficient of your experimental variable 
 is *a priori* unlikely to take values equal to $- \infty$, 
 the Avogadro constant, and everything in between with equal plausibility.
-Using uniform priors often results in other problems as well,
+Using uniform priors often leads to practical problems,
 such as edge effects at the parameter space boundaries
 and an inability to converge in the presence 
 of collinearity among the predictors.
@@ -328,7 +328,10 @@ as is evident by the observation that it is very often the case
 that frequentist $p$-values are misinterpreted
 as Bayesian posterior probabilities
 ---as if answering the question 
-"*How likely is my hypothesis given the observed data?*" [CITATION NEEDED].
+"*How likely is my hypothesis given the observed data?*"---
+or otherwise misinterpret them
+[https://www.jstor.org/stable/1403453,
+https://doi.org/10.1080/01621459.2017.1289846].
 The opposite misunderstanding is much more rarely observed.
 
 Another practical advantage that Bayesian inference has
@@ -395,7 +398,26 @@ Different conceptualizations of Bayesian uncertainty (Cox/Jaynes, de Finetti)
 https://www2.stat.duke.edu/courses/Spring08/sta122/Handouts/EfronWhyEveryone.pdf
 prior specification: prior predictive plots, sensitivity analysis, maximum entropy, critic's priors
 
-##### Mixed approaches  
+##### Mixed approaches
+
+Jaynes' often polemic tone is not widespread nowadays, 
+and that's probably for the better.
+Many mix-and-match approaches are currently widely used,
+such as multiple imputation,
+regularization, which can be seen as one way to incorporate priors
+within the frequentist framework,
+and mixed-effects (otherwise called multi-level or hierarchical) models
+in frequentist inference.
+There are only few theoretical issues on which the two approaches
+patently disagree: multiple comparisons, sequential testing, 
+and finite population sampling [https://www2.stat.duke.edu/~berger/papers/interplay.pdf].
+
+In summary, probability theory as extended logic,
+or simply Bayesian inference as it is often called,
+is a far-reaching theory that extends the reach of binary logic
+to problems of inference
+based on apparently defensible desiderata.
+
 
 Jaynes' polemic tone is not widespread nowadays, and that's for the better.
 As Bayesianism re-gains traction, it is not needed. 
