@@ -15,9 +15,9 @@ knitr::opts_chunk$set(fig.path = "img/",
                       fig.asp = 0.5)
 ```
 
->How could we build a machine which would carry out useful plausible reasoning, following clearly defined principles expressing an idealized common sense?  
+>How could we build a machine which would carry out useful plausible reasoning, following clearly defined principles expressing an idealized common sense? 
 
-E.T. Jaynes' Probability Theory  
+(Jaynes 2003) 
 
 The ideal of systematizing the scientific process
 has been a major pursuit of natural philosophers,
@@ -37,12 +37,12 @@ Arguably most of modern science is concerned
 with induction rather than deduction.
 The question in the opening quote can serve as a pragmatic abstraction of 
 the primordial ideal in the setting of inductive inference.
-Jaynes's thesis [REF] was that probability theory can be viewed as
+Jaynes's thesis (Jaynes 2003) was that probability theory can be viewed as
 our best answer in the attempt to provide a unifying system
 that can serve as a generalization of Aristotelian logic
 extended to inferential reasoning.
-Based on a reading of Jaynes' book^[1], 
-"Probability Theory: The Logic of Science",
+Based on a reading of Jaynes' book[^1], 
+"Probability Theory: The Logic of Science" (Jaynes 2003),
 I will produce an exposition of theoretical and practical issues
 in light of his arguments on the foundations of probability theory.
 
@@ -163,7 +163,7 @@ if $A$ is true, then not-$A$, or $\overline{A}$, must be false, and reversely.
 
 >Aristotelian deductive logic is the limiting form of our rules for plausible reasoning, as the robot becomes more and more certain of its conclusions.
 
-E.T. Jaynes' Probability Theory  
+(Jaynes 2003)
 
 ## Discussion  
 
@@ -247,7 +247,7 @@ However, in many actual scientific problems
 the underlying models are, or should be,
 complicated to a degree that the frequentist approach does not provide
 satisfactorily powerful tools
-that are as easy to implement.
+that are as easy to implement in a general way.
 Furthermore, if the question asked by the experimenter is 
 "What have I learned from the data regarding my hypothesis
 after seeing the data?",
@@ -280,7 +280,7 @@ $$ p(y, \theta) = p(y|\theta)p(\theta) $$
 where $p(\theta)$ is our prior distribution
 and $p(y|\theta)$ is the sampling distribution.
 If the prior predictive distribution generates values
-that are beyond what we would consider reasonable
+that are beyond what we would consider reasonable before seeing the data
 we must adjust our priors accordingly.
 Of course this method of prior elicitation 
 can only narrow down the range of parameter values 
@@ -296,7 +296,7 @@ it is arguably a useful feature of the analytical framework
 to be able to report it so that people can evaluate its reasonableness.
 
 The alternative of using frequentist inference,
-which is equivalent to assumming a uniform prior^[2],
+which is equivalent to assumming a uniform prior[^2],
 is rarely a defensible approach 
 since there is always some additional information:
 the coefficient of your experimental variable 
@@ -317,7 +317,7 @@ is more principled and can help avoid issues of "double dipping",
 i.e. using the data twice, 
 once to optimise the hyperparameters of the frequentist regularization 
 and to then later produce inferences based on them,
-something that undermines their predictive ability^[3].
+something that undermines their predictive ability[^3].
 
 ##### Paedagogical value  
 
@@ -329,9 +329,7 @@ that frequentist $p$-values are misinterpreted
 as Bayesian posterior probabilities
 ---as if answering the question 
 "*How likely is my hypothesis given the observed data?*"---
-or otherwise misinterpret them
-[https://www.jstor.org/stable/1403453,
-https://doi.org/10.1080/01621459.2017.1289846].
+or otherwise misinterpret them (Lecoutre, Lecoutre, & Poitevineau 2001; McShane & Gal 2017).
 The opposite misunderstanding is much more rarely observed.
 
 Another practical advantage that Bayesian inference has
@@ -340,7 +338,7 @@ the Bayesian analyst is enabled to
 more easily combine different analytical techniques
 compared to the seemingly unrelated methods
 of the frequentist framework
-(e.g. regularization, multiple imputation, robust statistics, meta-analysis, "mixed models")^[4].
+(e.g. regularization, multiple imputation, robust statistics, meta-analysis, "mixed models")[^4].
 As a consequence, the Bayesian can come closer to fitting 
 [the model that the data deserve](https://betanalpha.github.io/assets/case_studies/modeling_and_inference.html)
 instead of being restricted by feasibility constraints.
@@ -381,7 +379,7 @@ A breakthrough that lead to increased adoption of Bayesian inference
 was the development of sampling methods such as
 [Markov-chain Monte Carlo](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) (MCMC)
 that required intensive computer simulations.
-[More refined algorithms](https://arxiv.org/pdf/1111.4246.pdf) are now in wide use
+More refined algorithms (Hoffman & Gelman 2011) are now in wide use
 but those too require lengthier computation times
 as compared to approximate frequentist inference,
 although of comparable orders of magnitude for simple models.
@@ -389,14 +387,8 @@ Perhaps variational (Bayesian) inference methods
 will be more used in the future 
 as they usually run faster compared to sampling methods,
 although their results are also approximate.
-
-{{< figure src="https://raw.githubusercontent.com/chi-feng/mcmc-demo/master/docs/hmc.gif" title="Testing caption" lightbox="true" >}}
-
-Limitations: computational overhead (but perhaps variational inference can help in the future), limited adoption in some communities hinders communication
-More recent results question uniqueness of Bayesian inference as a reasoning framework about uncertainty and its generality (finite/infinite)
-Different conceptualizations of Bayesian uncertainty (Cox/Jaynes, de Finetti)
-https://www2.stat.duke.edu/courses/Spring08/sta122/Handouts/EfronWhyEveryone.pdf
-prior specification: prior predictive plots, sensitivity analysis, maximum entropy, critic's priors
+[Within-chain parallelization](https://github.com/paul-buerkner/brms/issues/892)
+is another promising approach for speeding up computation of certain models.
 
 ##### Mixed approaches
 
@@ -408,36 +400,20 @@ regularization, which can be seen as one way to incorporate priors
 within the frequentist framework,
 and mixed-effects (otherwise called multi-level or hierarchical) models
 in frequentist inference.
-There are only few theoretical issues on which the two approaches
-patently disagree: multiple comparisons, sequential testing, 
-and finite population sampling [https://www2.stat.duke.edu/~berger/papers/interplay.pdf].
 
 In summary, probability theory as extended logic,
 or simply Bayesian inference as it is often called,
-is a far-reaching theory that extends the reach of binary logic
+is a far-reaching theory that extends binary logic
 to problems of inference
 based on apparently defensible desiderata.
 
+[^1]: Mostly the first two chapters where he unfolds the foundations of Probability Theory as logic. The rest of the book just extends and further explains the corollaries of those first two chapters.
 
-Jaynes' polemic tone is not widespread nowadays, and that's for the better.
-As Bayesianism re-gains traction, it is not needed. 
-Many mix-and-match approaches are widely used (multiple imputation in frequentist inference, regularization which can be seen as one way to incorporate priors).
-https://simplystatistics.org/2014/10/13/as-an-applied-statistician-i-find-the-frequentists-versus-bayesians-debate-completely-inconsequential/
-Empirical Bayes
-mixed models
-There are only few theoretical issues on which the two approaches
-patently disagree: multiple comparisons, sequential testing, Finite population sampling [https://www2.stat.duke.edu/~berger/papers/interplay.pdf]
+[^2]: Even if useful to understand some differences between the Bayesian and the frequentist frameworks, this statement is simplifying some of the underlying conceptual differences which we will discuss later.
 
-I won't go into Maximum entropy (see Gelman's post) although it seems very powerful in certain settings
-Jaynes' theory is far-reaching, ambitious as it ties together logic and information theory (which I haven't talked about yet), yet is based on apparently defensible desiderata.
+[^3]: Similar points can be made regarding other frequentist tools such as [equivalence tests](https://doingbayesiandataanalysis.blogspot.com/2017/02/equivalence-testing-two-one-sided-test.html) and the perils of practices such as [repeated sampling](https://statmodeling.stat.columbia.edu/2014/02/13/stopping-rules-bayesian-analysis/), which both are of lesser concern for Bayesian inference.
 
-[1]: Mostly the first two chapters where he unfolds the foundations of Probability Theory as logic. The rest of the book just extends and further explains the corollaries of those first two chapters.
-
-[2]: Even if useful to understand some differences between the Bayesian and the frequentist frameworks, this statement is simplifying some of the underlying conceptual differences which we will discuss later.
-
-[3]: Similar points can be made regarding other frequentist tools such as [equivalence tests](https://doingbayesiandataanalysis.blogspot.com/2017/02/equivalence-testing-two-one-sided-test.html) and the perils of practices such as [repeated sampling](https://statmodeling.stat.columbia.edu/2014/02/13/stopping-rules-bayesian-analysis/), which both are of lesser concern for Bayesian inference.
-
-[4]: Even if the frequentist framework is based on 
+[^4]: Even if the frequentist framework is based on 
 [Kolmogorov's axioms](https://en.wikipedia.org/wiki/Probability_axioms), 
 when it comes to inference 
 following one of the different sub-schools of thought
@@ -446,4 +422,13 @@ following one of the different sub-schools of thought
 
 
 ## References  
+
+Hoffman, M.D., Gelman, A., 2011. The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo. arXiv:1111.4246 [cs, stat].
+
+Jaynes, E.T., 2003. Probability Theory: The Logic of Science. Cambridge University Press.
+
+Lecoutre, B., Lecoutre, M.-P., Poitevineau, J., 2001. Uses, Abuses and Misuses of Significance Tests in the Scientific Community: Won’t the Bayesian Choice Be Unavoidable? International Statistical Review / Revue Internationale de Statistique 69, 399–417. https://doi.org/10.2307/1403453
+
+McShane, B.B., Gal, D., 2017. Statistical Significance and the Dichotomization of Evidence. Journal of the American Statistical Association 112, 885–895. https://doi.org/10.1080/01621459.2017.1289846
+
 
