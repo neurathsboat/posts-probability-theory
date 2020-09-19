@@ -19,13 +19,13 @@ knitr::opts_chunk$set(fig.path = "img/",
 
 (Jaynes 2003) 
 
-The ideal of systematizing the scientific process
-has been a major pursuit of natural philosophers,
-such as Aristotle, Francis Bacon, Laplace, the Logical Positivists,
-and their descendants, whom we now call scientists.
-Aristotelian logic, in particular, was concerned with
-the truth of propositions such as
-"Socrates is an animal".
+The ideal of systematizing the scientific process 
+has been a principal pursuit for natural philosophers, 
+such as Aristotle, Francis Bacon, Laplace, the Logical Positivists, 
+and their descendants, whom we now call scientists. 
+Aristotelian logic, in particular, 
+was concerned with the truth of propositions 
+such as “Socrates is an animal”.
 The major tool of Aristotle's system was deduction
 ---drawing conclusions that necessarily follow from an argument.
 Much of the later work was focused on providing 
@@ -76,7 +76,7 @@ human reasoning is infallible or always consistent,
 but rather that if our conclusions disagree with some basic desiderata 
 we should discard the conclusions and the process that lead us to them.
 
-Jaynes sets up a set of basic desiderata as a starting point for his reasoning:
+Jaynes posits a set of basic desiderata as a starting point for his reasoning:
 
 I) Degrees of plausibility are represented by real numbers  
 
@@ -103,7 +103,7 @@ but the plausibility of $B$ is unchanged
 
 $$  B|AC' = B|AC $$
 
-then we should expect that a) the joint plausibility of $A$ and $B$ 
+then we should expect a) that the joint plausibility of $A$ and $B$ 
 can only increase and never decrease
 
 $$  AB|C' \geq AB|C $$
@@ -126,7 +126,8 @@ That is, if in two problems the robot's state of knowledge is the same
 then it must assign the same plausibilities in both.  
 
 It is perhaps surprising at first that the above-stated conditions
-uniquely identify one set of mathematical operations that obey them.
+uniquely identify one set of mathematical operations that obey them
+[but see Halpern (1999)].
 
 Two rules follow based on those desiderata from 
 [Cox's functional equations](https://en.wikipedia.org/wiki/Cox's_theorem):
@@ -184,7 +185,8 @@ working under the Bayesian framework leads to questions
 regarding the choice of priors 
 and a re-evaluation of the concept of uncertainty.
 Bayesian inference comes with some benefits in estimating relatively complex
-models that are not as easy to fit within the frequentist framework and 
+models that are not as easy to fit within the frequentist framework
+in a general way and 
 a simplification of their interpretation, as well as some drawbacks, 
 mostly revolving around computational cost.
 We will briefly discuss those issues in the following sections.
@@ -219,7 +221,7 @@ to new ones that are more consistent with the observed data.
 
 The tension between the two approaches on the nature of uncertainty
 delineates a philosophical issue that cannot be easily resolved.
-One the one hand, randomness can always be reduced 
+One the one hand, uncertainty can always be reduced 
 to progressively lower levels of description,
 but on the other it is an open question whether it can be completely eliminated.
 For example, the exact position an arrow is going to land on
@@ -261,7 +263,7 @@ Even for people who accept the conclusions
 of the logical analysis presented in the opening section,
 the choice of the prior probability is seen as a thorny issue.
 One objection often raised is that the prior can only be subjectively chosen,
-something which is seen as going against the objectivity pursued 
+something which is seen as going against the goal of objectivity pursued 
 in scientific practice.
 However, whereas the choice of the prior probability is in one sense subjective,
 as it is relative to the information available to the agent doing the reasoning,
@@ -310,7 +312,8 @@ Granted, there are ways to circumvent those problems in some cases
 under the frequentist framework.
 For instance, the latter problem that can arise due to collinearity
 can be ameliorated by regularization approaches.
-But it is easy to show [REF: Elements of Statistical Learning] that these are in turn
+But it is easy to show (Hastie, Tibshirani, & Friedman 2017, p. 91) 
+that these are in turn
 equivalent to choosing appropriate priors under the Bayesian framework.
 The difference is that the choice of the equivalent Bayesian priors
 is more principled and can help avoid issues of "double dipping",
@@ -321,7 +324,7 @@ something that undermines their predictive ability[^3].
 
 ##### Paedagogical value  
 
-Another important factor based on which someone may prefer the Bayesian approach
+An important factor based on which someone may prefer the Bayesian approach
 is that it appears to more closely match
 the way that scientists tend to think
 as is evident by the observation that it is very often the case
@@ -407,7 +410,7 @@ is a far-reaching theory that extends binary logic
 to problems of inference
 based on apparently defensible desiderata.
 
-[^1]: Mostly the first two chapters where he unfolds the foundations of Probability Theory as logic. The rest of the book just extends and further explains the corollaries of those first two chapters.
+[^1]: Mostly the first two chapters where he unfolds the foundations of Probability Theory as logic. The rest of the book merely extends and further explains the corollaries of those first two chapters.
 
 [^2]: Even if useful to understand some differences between the Bayesian and the frequentist frameworks, this statement is simplifying some of the underlying conceptual differences which we will discuss later.
 
@@ -416,12 +419,16 @@ based on apparently defensible desiderata.
 [^4]: Even if the frequentist framework is based on 
 [Kolmogorov's axioms](https://en.wikipedia.org/wiki/Probability_axioms), 
 when it comes to inference 
-following one of the different sub-schools of thought
-(the [Likelihood school](https://en.wikipedia.org/wiki/Likelihoodist_statistics), 
-[Fisherian significance testing framework, and Neymar-Pearson's hypothesis testing framework](https://en.wikipedia.org/wiki/Foundations_of_statistics)) can lead to incongruent conceptualizations.
+the different sub-schools of thought
+(the [Likelihood school](https://en.wikipedia.org/wiki/Likelihoodist_statistics),
+[Fisherian significance testing framework, or the Neymar-Pearson's hypothesis testing framework](https://en.wikipedia.org/wiki/Foundations_of_statistics)) can lead to incongruent conceptualizations.
 
 
 ## References  
+
+Halpern, J.Y., 1999. A Counterexample to Theorems of Cox and Fine. Journal of AI research 10, 67–85.
+
+Hastie, T., Tibshirani, R., Friedman, J.H., 2017. The elements of statistical learning: data mining, inference, and prediction.
 
 Hoffman, M.D., Gelman, A., 2011. The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo. arXiv:1111.4246 [cs, stat].
 
