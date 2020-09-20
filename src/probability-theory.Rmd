@@ -22,14 +22,14 @@ knitr::opts_chunk$set(fig.path = "img/",
 The ideal of systematizing the scientific process 
 has been a principal pursuit for natural philosophers, 
 such as Aristotle, Francis Bacon, Laplace, the Logical Positivists, 
-and their descendants, whom we now call scientists. 
+and their successors. 
 Aristotelian logic, in particular, 
 was concerned with the truth of propositions 
 such as “Socrates is an animal”.
-The primary tool of Aristotle's system was deduction
+The primary tool of Aristotle's system was *deduction*
 ---drawing conclusions that necessarily follow from an argument.
 Much of the later work focused on providing 
-the theoretical foundations for induction,
+the theoretical foundations for *induction*,
 [defined by Aristotle](https://plato.stanford.edu/entries/aristotle-logic/)
 as "argument from the particular to the universal",
 i.e. inferring general conclusions from particular evidence.
@@ -55,8 +55,8 @@ While we may be able to adequately evaluate the relative merit
 of two clearly distinguishable propositions or hypotheses,
 we are helpless once the number of hypotheses or the relevant parameters
 increases even slightly beyond that.
-We need a formalized system,
-a mathematical theory,
+We need a formalized system
+--a mathematical theory--
 to help us reason through those more complicated problems
 --and a machine to crunch the numbers.
 Choosing a machine as the subject that is supposed to execute the reasoning
@@ -73,7 +73,7 @@ as has been the case for Logical Positivists.
 Jaynes defines "plausible reasoning" as a synonym to inference,
 i.e. finding the most plausible answer to a question 
 based on the available information under uncertainty.
-The usage of "common sense" in the opening statement does not imply that 
+The usage of "common sense" in the opening quote does not imply that 
 human reasoning is infallible or always consistent, 
 but rather that if our conclusions disagree with some basic desiderata 
 we should discard the conclusions and the process that lead us to them.
@@ -129,7 +129,7 @@ That is, if in two problems the robot's state of knowledge is the same
 then it must assign the same plausibilities in both.  
 
 It is perhaps surprising at first that the above-stated conditions
-uniquely identify one set of mathematical operations that obey them
+uniquely identify a single set of mathematical operations that obey them
 [but see Halpern (1999)].
 
 Two rules follow based on those desiderata from 
@@ -151,7 +151,7 @@ $A|BC$ and $B|C$
 $$ p(AB|C) = p(A|BC)p(B|C) $$
 But since we could just as well swap the labels of the statements
 $A$ and $B$,
-based on the desideratum III the following relationship 
+based on desideratum III the following relationship 
 should also hold equivalently:
 
 $$ p(AB|C) = p(B|AC)p(A|C) $$
@@ -176,9 +176,9 @@ leads to the adoption of
 [Bayesian inference](http://www.scholarpedia.org/article/Bayesian_statistics)
 
 $$ p(H | E) = \frac{p(E | H) p(H)}{p(E)} $$
-where $p(H|E)$ is called the posterior distribution,
+where $p(H|E)$ is called the *posterior distribution*,
 the probability of the hypothesis $H$ given the evidence $E$,
-$p(H)$ is the prior probability,
+$p(H)$ is the *prior probability*,
 the probability of the hypothesis before observing the data,
 and $p(E)$ is the normalizing factor when multiple hypotheses are considered,
 for example when considering two competing hypotheses $H_1$ and $H_2$,
@@ -278,7 +278,7 @@ any agent that has access to the same information
 must choose the same prior probability.
 There remains the practical issue of translating our prior beliefs into 
 specific values of prior probabilities.
-An effective way to choose the priors 
+An effective way to choose priors 
 is to inspect prior predictive distributions,
 which provide a way to examine the range and likely values
 of responses our priors would produce
@@ -306,7 +306,7 @@ to be able to report it so that people can evaluate its reasonableness.
 The alternative of using frequentist inference,
 which is equivalent to assuming a uniform prior[^2],
 is rarely a defensible approach 
-since there is always some additional information:
+since there is always some additional information available:
 the coefficient of your experimental variable 
 is *a priori* unlikely to take values equal to $- \infty$, 
 the Avogadro constant, and everything in between with equal plausibility.
@@ -316,13 +316,14 @@ and an inability to converge in the presence
 of collinearity among the predictors.
 To be sure, there are ways to circumvent those problems in some cases
 under the frequentist framework.
-For instance, the latter problem that can arise due to collinearity
+For instance, both of those problems
 can be addressed by regularization approaches.
 But it is easy to show (Hastie, Tibshirani, & Friedman 2017, p. 91) 
 that these are in turn
 equivalent to choosing appropriate priors under the Bayesian framework.
 The difference is that the choice of the equivalent Bayesian priors
-is more principled and can help avoid issues of "double dipping",
+can be carried out in a more principled way 
+and that priors can help avoid issues of "double dipping",
 i.e. using the data twice, 
 once to optimize the hyperparameters of the frequentist regularization 
 and to then later produce inferences based on them,
@@ -413,7 +414,7 @@ in frequentist inference.
 In summary, probability theory as extended logic,
 or simply Bayesian inference as it is often called,
 is a far-reaching theory that extends binary logic
-to problems of inference
+to problems of inference under uncertainty
 based on apparently defensible desiderata.
 
 [^1]: Mostly the first two chapters where he unfolds the foundations of Probability Theory as logic. The rest of the book merely extends and further explains the corollaries of those first two chapters.
