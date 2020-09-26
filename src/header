@@ -10,7 +10,7 @@ summary = "A simple set of unifying principles for statistical inference"
 abstract = "A simple set of unifying principles for statistical inference"
 authors = ["Vassilis Kehayas"]
 hasPlotly = false
-doi = ""
+doi = "10.5281/zenodo.4052076"
 sourceFile = "src/probability-theory.Rmd"
 
 +++
