@@ -2,12 +2,12 @@ stages:
   - test
   - deploy
 
-image: vkehayas/alpine-r-doc-plot:1.1.1
+image: vkehayas/alpine-r-doc:1.1.0
 
 variables:
   MRAN_BUILD_DATE: '2019-01-05' # MRAN snapshot to use
-  FEATURED_IMAGE_PATH: img/test_figure-1.png # Image to "feature"
-  R_PACKAGES: "c('data.table')"
+  FEATURED_IMAGE_PATH: img/hmc-demo.gif # Image to "feature"
+  R_PACKAGES: "NULL"
   # Speficy if any R packages need to be installed
 
 before_script:
@@ -128,7 +128,7 @@ deploy:
                   render('$CI_PROJECT_NAME.Rmd', output_file = 'index.md');
                   source('ProcessRmd.R')"
     - cd $CI_PROJECT_NAME
-    - cp "$FEATURED_IMAGE_PATH" featured.png
+    - cp "$FEATURED_IMAGE_PATH" featured.gif
     - git add .
     - git commit -m "CI commit"
     - git push -u origin master

@@ -76,7 +76,7 @@ based on the available information under uncertainty.
 The usage of "common sense" in the opening quote does not imply that 
 human reasoning is infallible or always consistent, 
 but rather that if our conclusions disagree with some basic desiderata 
-we should discard the conclusions and the process that lead us to them.
+we should discard the conclusions and the process that led us to them.
 
 Jaynes posits a set of basic desiderata as a starting point for his reasoning:
 
