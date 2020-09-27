@@ -46,8 +46,6 @@ Based on a reading of Jaynes' book[^1],
 I will produce an exposition of theoretical and practical issues
 in light of his arguments on the foundations of probability theory.
 
-{{% toc %}}
-
 ## Probability theory as extended logic  
 
 Why should the systemization of inferential reasoning be our goal?
