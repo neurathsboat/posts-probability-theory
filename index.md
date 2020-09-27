@@ -423,12 +423,7 @@ based on apparently defensible desiderata.
 
 [^3]: Similar points can be made regarding other frequentist tools such as [equivalence tests](https://doingbayesiandataanalysis.blogspot.com/2017/02/equivalence-testing-two-one-sided-test.html) and the perils of practices such as [repeated sampling](https://statmodeling.stat.columbia.edu/2014/02/13/stopping-rules-bayesian-analysis/), which both are of lesser concern for Bayesian inference.
 
-[^4]: Even if the frequentist framework is based on 
-[Kolmogorov's axioms](https://en.wikipedia.org/wiki/Probability_axioms), 
-when it comes to inference 
-the different sub-schools of thought
-(the [Likelihood school](https://en.wikipedia.org/wiki/Likelihoodist_statistics),
-[Fisherian significance testing framework, or the Neymar-Pearson's hypothesis testing framework](https://en.wikipedia.org/wiki/Foundations_of_statistics)) can lead to incongruent conceptualizations.
+[^4]: Even if the frequentist framework is based on [Kolmogorov's axioms](https://en.wikipedia.org/wiki/Probability_axioms), when it comes to inference the different sub-schools of thought (the [Likelihood school](https://en.wikipedia.org/wiki/Likelihoodist_statistics), [Fisherian significance testing framework, or the Neymar-Pearson's hypothesis testing framework](https://en.wikipedia.org/wiki/Foundations_of_statistics)) can lead to incongruent conceptualizations.
 
 
 ## References  
